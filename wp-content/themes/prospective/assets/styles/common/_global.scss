@@ -7,24 +7,44 @@ header.banner {
     .main-header {
         height: 110px;
 
-        a.unc {
-            float: right;
-            img {
-                height: 100px;
+        a {
+            display: block;
+
+            &.brand {
+                float: left;
+                
+            }
+
+            &.unc {
+                float: right;
+                img {
+                    height: 100px;
+                }
             }
         }
     }
 
     nav.nav-primary {
         background: #235d86;
-        padding: 10px;
         height: 50px;
         box-shadow: inset 0 0 10px -5px #000;
 
         div.menu-nav-container>ul>li {
             display: inline-block;
-            padding: 0 5px;
-            margin: 0 5px;
+            height: 50px;
+
+            a {
+                display: inline-block;
+                height: 50px;
+                padding: 0px 10px;
+                line-height: 49px;
+
+                &:hover {
+                    background: #286998;
+                    color: #fff;
+                    text-decoration: none;
+                }
+            }
         }
     }
 }
