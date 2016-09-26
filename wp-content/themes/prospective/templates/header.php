@@ -1,6 +1,6 @@
 <header class="banner">
   <div class="main-header container">
-    <a class="brand" href="<?= esc_url(home_url('/')); ?>"><img src="<?= get_template_directory_uri(); ?>/assets/images/logo.png" width="275" alt="<?php bloginfo('name'); ?>"></a>
+    <a class="brand" href="<?= esc_url(home_url('/')); ?>"><img src="<?= get_template_directory_uri(); ?>/assets/images/logo.png" alt="<?php bloginfo('name'); ?>"></a>
     
     <a class="unc" href="http://unc.edu"><img src="<?= get_template_directory_uri(); ?>/assets/images/unc.png" alt="UNC"></a>
   </div>
