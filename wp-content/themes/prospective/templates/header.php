@@ -1,6 +1,7 @@
 <header class="banner">
   <div class="container">
     <a class="brand" href="<?= esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
+    <img src="<?= get_template_directory_uri(); ?>/assets/images/logo.png" width="200">
     <nav class="nav-primary">
       <?php
       if (has_nav_menu('primary_navigation')) :
