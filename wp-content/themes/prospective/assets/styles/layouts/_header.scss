@@ -1,0 +1,53 @@
+header.banner {
+    background: -webkit-linear-gradient(#fff, #7BAFD4);
+    background: -o-linear-gradient(#fff, #7BAFD4);
+    background: linear-gradient(#fff, #7BAFD4);
+    margin-bottom: 20px;
+
+    .main-header {
+        height: 110px;
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+
+        a {
+            display: block;
+
+            &.brand {                
+                img {
+                    height: 100px;
+                }
+            }
+
+            &.unc {
+                img {
+                    height: 100px;
+                }
+            }
+        }
+    }
+
+    nav.nav-primary {
+        background: #235d86;
+        height: 50px;
+        box-shadow: inset 0 0 10px -5px #000;
+
+        div.menu-nav-container>ul>li {
+            display: inline-block;
+            height: 50px;
+
+            a {
+                display: inline-block;
+                height: 50px;
+                padding: 0px 10px;
+                line-height: 49px;
+
+                &:hover {
+                    background: #286998;
+                    color: #fff;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
