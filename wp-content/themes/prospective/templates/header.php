@@ -2,7 +2,7 @@
   <div class="main-header container">
     <a class="brand" href="<?= esc_url(home_url('/')); ?>"><img src="<?= get_template_directory_uri(); ?>/assets/images/logo.png" alt="<?php bloginfo('name'); ?>"></a>
     
-    <a class="unc" href="http://unc.edu"><img src="<?= get_template_directory_uri(); ?>/assets/images/unc.png" alt="UNC"></a>
+    <a class="unc" href="http://digitalinnovation.unc.edu"><img src="<?= get_template_directory_uri(); ?>/dist/images/dil-logo-dark.png" alt="UNC Digital Innovation Lab"></a>
   </div>
   <nav class="nav-primary">
     <div class="container">
