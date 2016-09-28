@@ -1,5 +1,6 @@
 header.banner {
     background: linear-gradient(lighten($heelBlue, 80%), lighten($heelBlue, 20%));
+    border-bottom: 4px solid $heelBlue;
     margin-bottom: 20px;
 
     .main-header {
@@ -19,7 +20,7 @@ header.banner {
 
             &.unc {
                 img {
-                    height: 65px;
+                    height: 70px;
                 }
             }
         }
@@ -40,7 +41,7 @@ header.banner {
                 height: 50px;
                 padding: 0px 10px;
                 line-height: 49px;
-                transition: background 0.2s linear;
+                transition: background 0.2s ease;
 
                 &:hover {
                     background: lighten($darkBlue, 5%);
@@ -49,4 +50,46 @@ header.banner {
             }
         }
     }
+}
+
+div.slider {
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+
+    img {
+        width: 70%;
+    }
+    aside {
+        background: darken($heelBlue, 5%);
+        color: #fff;
+        width: 30%;
+        padding: 20px;
+
+        a.more {
+            background: $darkBlue;
+            color: lighten($heelBlue, 40%);
+            font-weight: bold;
+            display: block;
+            margin-top: 35px;
+            float: right;
+            padding: 10px;
+            transition: background 0.2s ease;
+            border-radius: 2px;
+
+            &:hover {
+                background: lighten($darkBlue, 5%);
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+div#news {
+    background: $heelBlue;
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    margin-top: 5px;
 }
