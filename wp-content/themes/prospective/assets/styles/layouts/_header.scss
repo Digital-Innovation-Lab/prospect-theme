@@ -57,26 +57,36 @@ div.slider {
     display: flex;
     align-items: stretch;
     justify-content: space-between;
+    box-shadow: 0 0 1px #555;
+    margin-top: 30px;
 
     img {
-        width: 70%;
+        width: 70%; 
     }
     aside {
         background: darken($heelBlue, 5%);
         color: #fff;
         width: 30%;
-        padding: 20px;
+        padding: 25px;
+        box-shadow: inset 0 0 15px -10px #000;
+        position: relative;
+
+        h1 {
+            margin-bottom: 20px;
+        }
 
         a.more {
             background: $darkBlue;
             color: lighten($heelBlue, 40%);
             font-weight: bold;
             display: block;
-            margin-top: 35px;
             float: right;
             padding: 10px;
             transition: background 0.2s ease;
             border-radius: 2px;
+            position: absolute;
+            bottom: 25px;
+            right: 25px;
 
             &:hover {
                 background: lighten($darkBlue, 5%);
@@ -87,9 +97,10 @@ div.slider {
 }
 
 div#news {
-    background: $heelBlue;
+    background: lighten($darkBlue, 5%);
+    color: #fff;
     width: 100%;
     height: 100px;
     padding: 10px;
-    margin-top: 5px;
+    margin-bottom: 20px;
 }
