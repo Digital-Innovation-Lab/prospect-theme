@@ -35,11 +35,15 @@ header.banner {
             display: inline-block;
             height: 50px;
 
+            &.current-menu-item>a{
+                background: lighten($darkBlue, 4%);
+            }
+
             a {
                 color: lighten($heelBlue, 40%);
                 display: inline-block;
                 height: 50px;
-                padding: 0px 10px;
+                padding: 0px 12px;
                 line-height: 49px;
                 transition: background 0.2s ease;
 
