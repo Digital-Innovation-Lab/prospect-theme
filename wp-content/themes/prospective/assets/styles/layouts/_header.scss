@@ -31,6 +31,10 @@ header.banner {
         height: 50px;
         box-shadow: inset 0 0 10px -5px #000;
 
+        div.menu-nav-container ul li:hover > ul {
+            display: block;
+        }
+
         div.menu-nav-container>ul#menu-nav>li {
             display: inline-block;
             height: 50px;
@@ -42,7 +46,7 @@ header.banner {
             a {
                 color: lighten($heelBlue, 40%);
                 text-shadow: 0px 0px 2px lighten(#000, 7%);
-                display: inline-block;
+                display: block;
                 height: 50px;
                 padding: 0px 12px;
                 line-height: 49px;
@@ -53,11 +57,28 @@ header.banner {
                     background: lighten($darkBlue, 5%);
                     box-shadow: inset 0px 0px 10px -5px lighten(#000, 10%);
                     text-decoration: none;
+                    
                 }
             }
 
+           
+
             &>ul.sub-menu {
+                background: rgba(lighten($darkBlue, 10%), 0.9);
+                position: absolute;
                 display: none;
+                list-style-type: none;
+                padding: 0;
+                min-width: 250px;
+                box-shadow: 0px 0px 10px -5px lighten(#000, 10%);
+                z-index: 9999;
+                li {
+                    width: 100%;
+                    margin: 4px 0;
+                }
+                a {
+                    width: 100%;
+                }
             }
         }
     }
