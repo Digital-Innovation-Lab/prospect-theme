@@ -24,14 +24,6 @@
         // JavaScript to be fired on all pages, after page specific JS is fired
       }
     },
-    'page_template_template_guide': {
-      init: function() {
-        $('main ol li').wrapInner('<span></span>');
-      },
-      finalize: function() {
-
-      }
-    },
     // Home page
     'home': {
       init: function() {
