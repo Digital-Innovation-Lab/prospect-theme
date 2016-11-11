@@ -31,6 +31,24 @@ header.banner {
         height: 50px;
         box-shadow: inset 0 0 10px -5px #000;
 
+        ul ul {
+            background: rgba(lighten($darkBlue, 10%), 0.9);
+            position: absolute;
+            display: none;
+            list-style-type: none;
+            padding: 0;
+            min-width: 250px;
+            box-shadow: 0px 0px 10px -5px lighten(#000, 10%);
+            z-index: 9999;
+            li {
+                width: 100%;
+                margin: 4px 0;
+            }
+            a {
+                width: 100%;
+            }
+        }
+
         div.menu-nav-container ul li:hover > ul {
             display: block;
         }
@@ -58,25 +76,6 @@ header.banner {
                     box-shadow: inset 0px 0px 10px -5px lighten(#000, 10%);
                     text-decoration: none;
                     
-                }
-            }
-
-           
-
-            &>ul.sub-menu {
-                background: rgba(lighten($darkBlue, 10%), 0.9);
-                position: absolute;
-                list-style-type: none;
-                padding: 0;
-                min-width: 250px;
-                box-shadow: 0px 0px 10px -5px lighten(#000, 10%);
-                z-index: 9999;
-                li {
-                    width: 100%;
-                    margin: 4px 0;
-                }
-                a {
-                    width: 100%;
                 }
             }
         }
