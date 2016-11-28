@@ -20,13 +20,20 @@
 
 <?php if (is_front_page()) : ?>
 <div class="slider">
-  <div class="carousel">
+  <!--<div id="home-carousel"class="carousel" data-ride="carousel">
+    <ol class="carousel-indicators">
+    <li data-target="#home-carousel" data-slide-to="0" class="active"></li>
+    <li data-target="#home-carousel" data-slide-to="1"></li>
+    <li data-target="#home-carousel" data-slide-to="2"></li>
+  </ol>
+
     <div class="carousel-inner" role="listbox">
       <div class="carousel-item active"><img src="http://localhost:8888/prospect-theme/wp-content/uploads/2016/09/unnamed-700x300.jpg"></div>
       <div class="carousel-item"><img src="http://localhost:8888/prospect-theme/wp-content/themes/prospective/screenshot.png"></div>
       <div class="carousel-item"><img src="http://localhost:8888/prospect-theme/wp-content/themes/prospective/screenshot.png"></div>
     </div>
-  </div>
+  </div>-->
+  <?php echo do_shortcode('[image-carousel]'); ?>
   <aside>
     <h1><?php the_field('hero_header'); ?></h1>
     <p><?php the_field('hero_text'); ?></p>
