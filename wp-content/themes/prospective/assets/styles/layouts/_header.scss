@@ -1,3 +1,30 @@
+$breakpoint: 700px;
+$brand_width: 252px;
+@media(max-width: $breakpoint) {
+  header.banner {
+    .main-header a {
+      &.unc {
+        display: none;
+      }
+
+      &.brand {
+        padding-left: 50%;
+        transform: translateX(-($brand_width / 2));
+      }
+    }
+
+    .nav-primary {
+      box-shadow: none !important;
+    }
+  }
+}
+
+@media(min-width: $breakpoint) {
+  .mobile_nav {
+    display: none;
+  }
+}
+
 header.banner {
     background: linear-gradient(lighten($heelBlue, 80%), lighten($heelBlue, 20%));
     border-bottom: 4px solid $heelBlue;
@@ -12,7 +39,7 @@ header.banner {
         a {
             display: block;
 
-            &.brand {                
+            &.brand {
                 img {
                     height: 90px;
                 }
@@ -23,6 +50,20 @@ header.banner {
                     height: 70px;
                 }
             }
+        }
+    }
+
+    .mobile_nav {
+        background: $darkBlue;
+        height: 50px;
+
+        p {
+          display: inline-block;;
+          color: white;
+          z-index: 9999;
+          height: 50px;
+          padding: 0px 12px;
+          line-height: 49px;
         }
     }
 
@@ -75,7 +116,7 @@ header.banner {
                     background: lighten($darkBlue, 5%);
                     box-shadow: inset 0px 0px 10px -5px lighten(#000, 10%);
                     text-decoration: none;
-                    
+
                 }
             }
         }
@@ -91,16 +132,16 @@ div.slider {
     justify-content: space-between;
     box-shadow: 0 0 1px #555;
     margin-top: -20px;
-    
+
     div.carousel {
         width: 70%;
         overflow: hidden;
 
         img {
-            width: 100%; 
+            width: 100%;
         }
     }
-    
+
     aside {
         background: darken($heelBlue, 5%);
         color: #fff;
@@ -135,16 +176,16 @@ div.slider {
                         text-decoration: none;
                     }
                 }
-                
+
                 color: lighten($heelBlue, 40%);
                 font-weight: bold;
                 display: block;
                 float: right;
                 padding: 10px;
                 transition: background 0.2s ease;
-                border-radius: 2px;  
+                border-radius: 2px;
             }
-        }  
+        }
     }
 }
 

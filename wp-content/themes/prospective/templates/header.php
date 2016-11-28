@@ -1,8 +1,11 @@
 <header class="banner">
   <div class="main-header container">
     <a class="brand" href="<?= esc_url(home_url('/')); ?>"><img src="<?= get_template_directory_uri(); ?>/dist/images/logo.png" alt="<?php bloginfo('name'); ?>"></a>
-    
+
     <a class="unc" href="http://digitalinnovation.unc.edu"><img src="<?= get_template_directory_uri(); ?>/dist/images/dil-logo-dark.png" alt="UNC Digital Innovation Lab"></a>
+  </div>
+  <div class="mobile_nav">
+    <p>Bruh</p>
   </div>
   <nav class="nav-primary">
     <div class="container">
@@ -36,7 +39,7 @@
 <div id="news">
   <div class="container">
     <?php
-      $args = array( "showposts" => 3 );                  
+      $args = array( "showposts" => 3 );
       query_posts($args);
 
       if (have_posts()) {
