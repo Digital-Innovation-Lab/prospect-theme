@@ -20,20 +20,41 @@
 
 <?php if (is_front_page()) : ?>
 <div class="slider">
-  <!--<div id="home-carousel"class="carousel" data-ride="carousel">
+  <div id="home-carousel"class="carousel" data-ride="carousel">
+    <?php
+      $images = get_posts('post_type=carousel');
+    ?>
     <ol class="carousel-indicators">
-    <li data-target="#home-carousel" data-slide-to="0" class="active"></li>
-    <li data-target="#home-carousel" data-slide-to="1"></li>
-    <li data-target="#home-carousel" data-slide-to="2"></li>
-  </ol>
+      <?php
+        $i = 0;
+        foreach ($images as $image) {
+          if ($i == 0) {
+            echo '<li data-target="#home-carousel" data-slide-to="0" class="active"></li>';
+          } else {
+            echo '<li data-target="#home-carousel" data-slide-to="'. $i .'"></li>';
+          }
+          $i++;
+        }
+      ?>
+    </ol>
 
     <div class="carousel-inner" role="listbox">
-      <div class="carousel-item active"><img src="http://localhost:8888/prospect-theme/wp-content/uploads/2016/09/unnamed-700x300.jpg"></div>
-      <div class="carousel-item"><img src="http://localhost:8888/prospect-theme/wp-content/themes/prospective/screenshot.png"></div>
-      <div class="carousel-item"><img src="http://localhost:8888/prospect-theme/wp-content/themes/prospective/screenshot.png"></div>
+      <?php
+        $i = 0;
+        foreach ($images as $post) {
+          setup_postdata($post);
+
+          if ($i == 0) {
+            echo '<div class="carousel-item active"><img src="'. get_the_post_thumbnail_url() .'" alt="'. get_the_title() .'"></div>';
+          } else {
+            echo '<div class="carousel-item"><img src="'. get_the_post_thumbnail_url() .'" alt="'. get_the_title() .'"></div>';
+          }
+          $i++;
+        }
+        wp_reset_postdata();
+      ?>
     </div>
-  </div>-->
-  <?php echo do_shortcode('[image-carousel]'); ?>
+  </div>
   <aside>
     <h1><?php the_field('hero_header'); ?></h1>
     <p><?php the_field('hero_text'); ?></p>
