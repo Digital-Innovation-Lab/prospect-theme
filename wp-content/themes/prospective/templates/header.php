@@ -4,10 +4,14 @@
 
     <a class="unc" href="http://digitalinnovation.unc.edu"><img src="<?= get_template_directory_uri(); ?>/dist/images/dil-logo-dark.png" alt="UNC Digital Innovation Lab"></a>
   </div>
-  <div class="mobile_nav">
-    <p>Bruh</p>
-  </div>
-  <nav class="nav-primary">
+  <nav class="mobile_nav">
+    <div class="container">
+      <div onclick="myFunction()">
+        <i id="mobile_menu" class="fa fa-bars" aria-hidden="true"></i>
+      </div>
+    </div>
+  </nav>
+  <nav class="nav-primary" id="primary_nav">
     <div class="container">
       <?php
       if (has_nav_menu('primary_navigation')) :
@@ -15,7 +19,16 @@
       endif;
       ?>
     </div>
-    </nav>
+  </nav>
+  <script>
+    function myFunction() {
+      if(document.getElementById("primary_nav").offsetHeight === 0) {
+        document.getElementById("primary_nav").style.display = "block";
+      } else {
+        document.getElementById("primary_nav").style.display = "none";
+      }
+    }
+  </script>
 </header>
 
 <?php if (is_front_page()) : ?>
