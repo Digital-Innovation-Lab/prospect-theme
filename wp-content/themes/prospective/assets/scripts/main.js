@@ -19,6 +19,17 @@
     'common': {
       init: function() {
         // JavaScript to be fired on all pages
+        $('#mobile_menu').click(function() {
+          $('.nav-primary').slideToggle();
+        });
+
+        $(window).resize(function() {
+          if($('html').width() > 685) {
+            $('.nav-primary').css('display', 'block');
+          } else {
+            $('.nav-primary').css('display', 'none');
+          }
+        });
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired

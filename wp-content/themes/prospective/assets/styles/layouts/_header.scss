@@ -20,9 +20,9 @@ $brand_width: 252px;
   }
 }
 
-@media(min-width: $breakpoint) {
+@media(min-width: $breakpoint + 1) {
   .mobile_nav {
-    //display: none !important;
+    display: none !important;
   }
 }
 
@@ -68,30 +68,6 @@ header.banner {
           line-height: 49px;
           cursor: pointer;
         }
-    }
-
-    #mobile_menu:focus  {
-      background: red;
-    }
-
-    input[type=checkbox] {
-    	position: absolute;
-    	top: -9999px;
-    	left: -9999px;
-    }
-
-    label {
-    	display: block;
-    	background: #08C;
-    	padding: 5px;
-    	border: 1px solid rgba(0,0,0,.1);
-    	border-radius: 2px;
-    	color: white;
-    	font-weight: bold;
-    }
-
-    input[type=checkbox]:checked ~ .to-be-changed {
-    	color: red;
     }
 
     nav.nav-primary {

@@ -6,10 +6,7 @@
   </div>
   <nav class="mobile_nav">
     <div class="container">
-      <a id="mobile_menu" href=""><i class="fa fa-bars" aria-hidden="true"></i></a>
-      <input type="checkbox" id="toggle">
-      <label for="toggle">Click me!</label>
-      <p class="to-be-changed">I'm going to be red! It's gonna be legen... Wait for it...</p>
+      <i id="mobile_menu" class="fa fa-bars" aria-hidden="true"></i>
     </div>
   </nav>
   <nav class="nav-primary" id="primary_nav">
@@ -21,15 +18,6 @@
       ?>
     </div>
   </nav>
-  <!-- <script>
-    function myFunction() {
-      if(document.getElementById("primary_nav").offsetHeight === 0) {
-        document.getElementById("primary_nav").style.display = "block";
-      } else {
-        document.getElementById("primary_nav").style.display = "none";
-      }
-    }
-  </script> -->
 </header>
 
 <?php if (is_front_page()) : ?>
