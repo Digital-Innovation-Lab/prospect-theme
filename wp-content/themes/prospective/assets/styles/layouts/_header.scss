@@ -16,6 +16,23 @@ $brand_width: 252px;
     .nav-primary {
       box-shadow: none !important;
       display: none;
+      height: auto !important;
+    }
+
+    div.menu-nav-container>ul#menu-nav>li {
+      display: block !important;
+    }
+  }
+
+  div.slider {
+    display: block !important;
+
+    div.carousel {
+      width: 100% !important;
+    }
+
+    aside {
+      width: 100% !important;
     }
   }
 }
