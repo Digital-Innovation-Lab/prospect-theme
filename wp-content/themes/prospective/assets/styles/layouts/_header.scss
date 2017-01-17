@@ -23,7 +23,15 @@ $brand_width: 252px;
       display: block !important;
     }
   }
+}
 
+@media(min-width: $breakpoint + 1) {
+  .mobile_nav {
+    display: none !important;
+  }
+}
+
+@media(max-width: 1095px) {
   div.slider {
     display: block !important;
 
@@ -34,12 +42,6 @@ $brand_width: 252px;
     aside {
       width: 100% !important;
     }
-  }
-}
-
-@media(min-width: $breakpoint + 1) {
-  .mobile_nav {
-    display: none !important;
   }
 }
 
