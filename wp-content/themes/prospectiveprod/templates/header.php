@@ -4,10 +4,12 @@
 
     <a class="unc" href="http://digitalinnovation.unc.edu"><img src="<?= get_template_directory_uri(); ?>/dist/images/dil-logo-dark.png" alt="UNC Digital Innovation Lab"></a>
   </div>
-  <div class="mobile_nav">
-    <p></p>
-  </div>
-  <nav class="nav-primary">
+  <nav class="mobile_nav">
+    <div class="container">
+      <i id="mobile_menu" class="fa fa-bars" aria-hidden="true"></i>
+    </div>
+  </nav>
+  <nav class="nav-primary" id="primary_nav">
     <div class="container">
       <?php
       if (has_nav_menu('primary_navigation')) :
@@ -15,7 +17,7 @@
       endif;
       ?>
     </div>
-    </nav>
+  </nav>
 </header>
 
 <?php if (is_front_page()) : ?>
