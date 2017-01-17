@@ -15,31 +15,13 @@ $brand_width: 252px;
 
     .nav-primary {
       box-shadow: none !important;
-      display: none;
-      height: auto !important;
-    }
-
-    div.menu-nav-container>ul#menu-nav>li {
-      display: block !important;
-    }
-  }
-
-  div.slider {
-    display: block !important;
-
-    div.carousel {
-      width: 100% !important;
-    }
-
-    aside {
-      width: 100% !important;
     }
   }
 }
 
-@media(min-width: $breakpoint + 1) {
+@media(min-width: $breakpoint) {
   .mobile_nav {
-    display: none !important;
+    display: none;
   }
 }
 
@@ -74,16 +56,14 @@ header.banner {
     .mobile_nav {
         background: $darkBlue;
         height: 50px;
-        display: inline-block;
-        width: 100%;
 
-        i {
+        p {
+          display: inline-block;;
           color: white;
           z-index: 9999;
           height: 50px;
           padding: 0px 12px;
           line-height: 49px;
-          cursor: pointer;
         }
     }
 
@@ -131,12 +111,12 @@ header.banner {
                 line-height: 49px;
                 transition: background 0.2s ease;
                 transition: box-shadow 0.2s ease;
-                text-decoration: none;
 
                 &:hover {
                     background: lighten($darkBlue, 5%);
                     box-shadow: inset 0px 0px 10px -5px lighten(#000, 10%);
                     text-decoration: none;
+
                 }
             }
         }
