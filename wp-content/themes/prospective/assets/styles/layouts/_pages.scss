@@ -1,3 +1,15 @@
+body {
+    div.page-header {
+            margin-bottom: 30px;
+            border-bottom: 2px dotted #ddd;
+            padding-bottom: 5px;
+
+            h1 {
+                color: $darkBlue;
+            }
+        }
+}
+
 body.page-template-template-guide {
     main.main {
         ol {
