@@ -24,7 +24,7 @@
 <div class="slider">
   <div id="home-carousel"class="carousel" data-ride="carousel">
     <?php
-      $images = get_posts('post_type=carousel');
+      $images = get_posts('post_type=carousel&order=ASC');
     ?>
     <ol class="carousel-indicators">
       <?php
