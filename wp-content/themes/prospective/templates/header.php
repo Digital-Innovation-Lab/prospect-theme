@@ -92,8 +92,10 @@
 </div>
 <?php endif; ?>
 
+<?php if (!is_front_page()) : ?>
 <div class="page-header">
   <div class="container">
     <h1><?= Titles\title(); ?></h1>
   </div>
 </div>
+<?php endif; ?>
