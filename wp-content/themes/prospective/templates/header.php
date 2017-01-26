@@ -1,3 +1,5 @@
+<?php use Roots\Sage\Titles; ?>
+
 <header class="banner">
   <div class="main-header container">
     <a class="brand" href="<?= esc_url(home_url('/')); ?>"><img src="<?= get_template_directory_uri(); ?>/dist/images/logo.png" alt="<?php bloginfo('name'); ?>"></a>
@@ -89,3 +91,9 @@
   </div>
 </div>
 <?php endif; ?>
+
+<div class="page-header">
+  <div class="container">
+    <h1><?= Titles\title(); ?></h1>
+  </div>
+</div>
