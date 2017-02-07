@@ -50,6 +50,15 @@
       init: function() {
         // JavaScript to be fired on the about us page
       }
+    },
+    // FAQ page
+    'faq': {
+      init: function() {
+        // Javascript to be fire on the faq page
+        $('h2').click(function() {
+          $(this).next('p').slideToggle(400);
+        });
+      }
     }
   };
 
