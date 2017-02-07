@@ -55,7 +55,7 @@
     'faq': {
       init: function() {
         // Javascript to be fire on the faq page
-        $('h2').click(function() {
+        $('h3').click(function() {
           $(this).next('div').slideToggle(400);
         });
       }

@@ -37,20 +37,19 @@ body.page-template-template-guide {
 
 body.page-template-template-faq {
   main.main {
-    h2 {
-      background-color: $heelBlue;
+    h3 {
+      background-color: lighten($heelBlue, 5%);
       padding: 15px;
       border-width: 2px;
       border-radius: 5px;
-      box-shadow: inset 0px 0px 15px -5px #000;
+      box-shadow: inset 0px 0px 10px -5px #000;
       cursor: pointer;
     }
 
     div {
         display: none;
-        font-size: 1.2rem;
         margin-left: 20px;
-        padding-bottom: 10px;
+        padding-bottom: 20px;
     }
   }
 }
