@@ -29,6 +29,14 @@ $brand_width: 252px;
   .mobile_nav {
     display: none !important;
   }
+  div.slider {
+    
+    max-height: 432px;
+    overflow: hidden;
+    aside {
+        max-height: 432px;
+    }
+  }
 }
 
 @media(max-width: 1095px) {
@@ -76,7 +84,6 @@ $brand_width: 252px;
 header.banner {
     background: linear-gradient(lighten($heelBlue, 80%), lighten($heelBlue, 20%));
     border-bottom: 4px solid $heelBlue;
-    margin-bottom: 20px;
 
     .main-header {
         height: 110px;
@@ -175,13 +182,10 @@ header.banner {
 
 div.slider {
     width: 100%;
-    max-height: 432px;
-    overflow: hidden;
     display: flex;
     align-items: stretch;
     justify-content: space-between;
     box-shadow: 0 0 1px #555;
-    margin-top: -20px;
 
     div.carousel {
         width: 70%;
@@ -207,13 +211,17 @@ div.slider {
         background: darken($heelBlue, 5%);
         color: #fff;
         width: 475px;
-        max-height: 432px;
+        height: auto;
         padding: 25px;
         box-shadow: inset 0 0 15px -10px #000;
         position: relative;
 
         h1 {
             margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 60px;
         }
 
         div.buttons {
@@ -285,5 +293,19 @@ div#news {
                 }
             }
         }
+    }
+}
+
+div.page-header {
+    background: #f9f9f9;
+    padding: 20px 0;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #dedede;
+    box-shadow: 0 0 10px -8px #000;
+
+    h1 {
+        color: $darkBlue;
+        font-size: 2.55rem;
+        margin: 0;
     }
 }
