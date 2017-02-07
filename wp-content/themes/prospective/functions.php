@@ -68,3 +68,15 @@ function cptui_register_my_cpts_carousel() {
 
 // End of cptui_register_my_cpts_carousel()
 }
+
+
+add_action('upload_mimes', 'add_mime_types');
+// PURPOSE: Ensure that txt and png files are able to be added to the Media Library
+function add_mime_types($mime_types)
+{
+	$mime_types['txt'] = 'text/plain';
+	$mime_types['csv'] = 'text/csv';
+	$mime_types['svg'] = 'image/svg+xml';
+
+	return $mime_types;
+} // add_mime_types()
