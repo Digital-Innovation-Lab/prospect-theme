@@ -79,9 +79,9 @@
           the_post();
 
           echo '<div>';
-          echo '<h5>'. get_the_title() .'</h5>';
-          echo '<p>'. get_the_excerpt() .'</p>';
-          echo '<a href="'. get_permalink() .'">Read More</a>';
+          echo '<h5><a href="'. get_permalink() .'">'. get_the_title() .'</a></h5>';
+          echo '<p>'. substr(get_the_excerpt(), 0, 250) .'</p>';
+          //echo '<a href="'. get_permalink() .'">Read More</a>';
           echo '</div>';
         }
 

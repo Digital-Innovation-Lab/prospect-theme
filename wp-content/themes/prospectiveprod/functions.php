@@ -30,7 +30,7 @@ unset($file, $filepath);
 function custom_excerpt_length( $length ) {
 	return 20;
 }
-add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+//add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
 function custom_excerpt_more($more) {
    return '...';

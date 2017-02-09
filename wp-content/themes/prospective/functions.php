@@ -27,15 +27,24 @@ foreach ($sage_includes as $file) {
 }
 unset($file, $filepath);
 
-function custom_excerpt_length( $length ) {
-	return 20;
-}
-//add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+function the_excerpt_max_charlength($charlength) {
+	$excerpt = get_the_excerpt();
+	$charlength++;
 
-function custom_excerpt_more($more) {
-   return '...';
+	if ( mb_strlen( $excerpt ) > $charlength ) {
+		$subex = mb_substr( $excerpt, 0, $charlength - 5 );
+		$exwords = explode( ' ', $subex );
+		$excut = - ( mb_strlen( $exwords[ count( $exwords ) - 1 ] ) );
+		if ( $excut < 0 ) {
+			echo mb_substr( $subex, 0, $excut );
+		} else {
+			echo $subex;
+		}
+		echo '[...]';
+	} else {
+		echo $excerpt;
+	}
 }
-add_filter('excerpt_more', 'custom_excerpt_more');
 
 add_action( 'init', 'cptui_register_my_cpts_carousel' );
 function cptui_register_my_cpts_carousel() {
