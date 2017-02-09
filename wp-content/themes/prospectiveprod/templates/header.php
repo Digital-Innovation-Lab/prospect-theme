@@ -24,7 +24,7 @@
 
 <?php if (is_front_page()) : ?>
 <div class="slider">
-  <div id="home-carousel"class="carousel" data-ride="carousel">
+  <div id="home-carousel" class="carousel" data-ride="carousel">
     <?php
       $images = get_posts('post_type=carousel&order=ASC');
     ?>
