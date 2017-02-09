@@ -40,7 +40,7 @@ function the_excerpt_max_charlength($charlength) {
 		} else {
 			echo $subex;
 		}
-		echo '[...]';
+		echo '...';
 	} else {
 		echo $excerpt;
 	}
