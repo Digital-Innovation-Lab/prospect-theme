@@ -46,6 +46,11 @@ function the_excerpt_max_charlength($charlength) {
 	}
 }
 
+function custom_excerpt_more($more) {
+   return '...';
+}
+add_filter('excerpt_more', 'custom_excerpt_more');
+
 add_action( 'init', 'cptui_register_my_cpts_carousel' );
 function cptui_register_my_cpts_carousel() {
 	$labels = array(

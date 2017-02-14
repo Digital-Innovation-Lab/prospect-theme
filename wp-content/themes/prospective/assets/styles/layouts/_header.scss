@@ -30,7 +30,6 @@ $brand_width: 252px;
     display: none !important;
   }
   div.slider {
-    
     max-height: 432px;
     overflow: hidden;
     aside {
@@ -50,6 +49,10 @@ $brand_width: 252px;
             height: 160px;
             overflow: scroll;
             padding: 0px 10px !important;
+
+            p {
+                margin: 0;
+            }
 
             &>a {
                 position: absolute;
